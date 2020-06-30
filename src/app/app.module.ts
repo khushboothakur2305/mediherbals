@@ -1,29 +1,22 @@
+import { ProductModule } from './module/product/product/product.module';
+import { MaterialModule } from './module/material/material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './products/product-list/product-list.component';
-import { TulsiAmritComponent } from './products/tulsi-amrit/tulsi-amrit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CartComponent } from './cart/cart.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductListComponent,
-    TulsiAmritComponent
-  ],
+  declarations: [AppComponent, CartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    MatSidenavModule
+    MaterialModule,
+    ProductModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
