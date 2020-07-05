@@ -11,7 +11,12 @@ import { UricDSCapsuleComponent } from './products/uric-ds-capsule/uric-ds-capsu
 import { TulsiDSCoughSyrupComponent } from './products/tulsi-ds-cough-syrup/tulsi-ds-cough-syrup.component';
 import { SpermCareCapsuleComponent } from './products/sperm-care-capsule/sperm-care-capsule.component';
 import { FeverticSyrupComponent } from './products/fevertic-syrup/fevertic-syrup.component';
+import { HomepageComponent } from './Home/homepage/homepage.component';
+
+import { HeaderComponent } from './Toolbar/header/header.component';
 const routes: Routes = [
+{path:'header',component:HeaderComponent},
+  { path: 'home', component: HomepageComponent },
   { path: 'tulsiamrit', component: TulsiAmritComponent },
   { path: 'cart', component: CartComponent },
   { path: 'zomocidSyrup', component:  ZomocidSyrupComponent },
